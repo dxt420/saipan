@@ -130,23 +130,19 @@
         <nav class="mobile-bottom-nav">
                 <div class="mobile-bottom-nav__item ">
                     <div class="mobile-bottom-nav__item-content">
-                         
                         <i class="material-icons">format_shapes</i>
-                        
                         <a href={% url 'vip:assets'  %}> Assets</a>
                     </div>		
                 </div>
                 <div class="mobile-bottom-nav__item">		
                     <div class="mobile-bottom-nav__item-content">
                         <i class="material-icons">account_balance_wallet</i>
-                       
-
                         <a href={% url 'vip:wdraw'  %}>  W/draw</a>
                     </div>
                 </div>
                 <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
                     <div class="mobile-bottom-nav__item-content">
-                        <i class="material-icons">home</i>
+                            <a href={% url 'vip:home'  %}> <i class="material-icons">home</i></a>
                         
                     </div>		
                 </div>
@@ -154,16 +150,14 @@
                 <div class="mobile-bottom-nav__item">
                     <div class="mobile-bottom-nav__item-content">
                         <i class="material-icons">aspect_ratio</i>
-                        
-                        <a href={% url 'vip:promo'  %}>  Promo</a>
+                        Promo
                     </div>		
                 </div>
 
                 <div class="mobile-bottom-nav__item">
                         <div class="mobile-bottom-nav__item-content">
                             <i class="material-icons">chat</i>
-                            
-                            <a href="">   Chat/a>
+                            Chat
                         </div>		
                     </div>
             </nav>
@@ -192,165 +186,21 @@
                     <div class="background bg-170"><img src="/static/vip/img/background.png" alt=""></div>
                     <div class="w-100">
                         <h1 class="text-center text-white title-background"><small>Welcome</h1>
-                        <div class="carosel">
-                            <div class="swiper-container swiper-init swipermultiple">
-                                <div class="swiper-pagination"></div>
-                                <!-- <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="swiper-content-block ">
-                                            <h4 class="title-small-carousel">My Team</h4>
-                                            <p>No new team members today</p>
-                                            <div class="gaugewrap">
-                                                <h2 class="title-number-carousel"><span class="text-primary">0</span><small>/0 People</small></h2>
-                                                <div class="progress_profile1 gauge" data-value="0.00" data-size="20" data-thickness="2" data-animation-start-value="0" data-reverse="false"></div>
-                                            </div>
-                                        </div>
+                            <div class="jumbotron jumbotron-fluid mb-3 bg-white rounded-3 text-center z2">
+                                    <div class="container px-2">
+                                        <i class="avatar avatar-120 mr-0  material-icons icon-4x bg-white text-primary border-primary ">aspect_ratio</i>
+                                        <h2 class=" text-primary">Your Promo Code：DEFG
+                                            </h2>
+                                        <p class="lead">When your Team members register, fill in the promotion code and you will enjoy the team benefits</p>
+                                        <hr class="my-4">
+                                        <!-- <p class="text-secondary">MobileUX is HTML template based on Bootstrap 4.1 framework. This html template can be used in various business domains like Manufacturing, inventory, IT, administration etc. for admin panel, system development, web applications, even website can be created. This template also considered social pages, ecommerce pages and many more.</p>
+                                        <br>
+                                        <a class="btn btn-primary" href="#" role="button">Learn more</a> -->
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="swiper-content-block ">
-                                            <h4 class="title-small-carousel">Basic Gold</h4>
-                                            <p>Amount of the basic income</p>
-                                            <div class="gaugewrap">
-                                                <h2 class="title-number-carousel"><span class="text-danger">62,000</span><small>UGX</small></h2>
-                                                <div class="progress_profile2  gauge" data-value="0.65" data-size="20" data-thickness="2" data-animation-start-value="0" data-reverse="false"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-                                </div> -->
-                                <table class="blueTable">
-                                    <thead>
-                                    <tr>
-                                    <th>Basic Gold</th>
-                                    <th>Investment </th>
-                                   
-                                    </tr>
-                                    </thead>
-                                    <tfoot>
-                                    <tr>
-                                    <td colspan="4">
-                                    <div class="links">  <a href={% url 'vip:assets'  %}>More</a> </div>
-                                    </td>
-                                    </tr>
-                                    </tfoot>
-                                    <tbody>
-                                    <tr>
-                                    <td>8000</td>
-                                    <td>720</td>
-                                   
-                                    </tr>
-                                    <tr>
-                                    <td>20000</td>
-                                    <td>6000</td>
-                               
-                                    </tr>
-                                    <tr>
-                                            <td>2000</td>
-                                            <td>600</td>
-                                       
-                                            </tr>
-                                   
-                                    </tbody>
-                                    </table>
-                            </div>
-                        </div>
-
-                        <div class="carosel">
-                            <div class="swiper-container swiper-init swipermultiple">
-                           
-                              
-                                <table class="blueTable">
-                                    <thead>
-                                    <tr>
-                                    <th>New Members Today
-                                    </th>
-                                    <th>Total Number of Members
-                                    </th>
-                                   
-                                    </tr>
-                                    </thead>
-                                   
-                                    <tbody>
-                                    <tr>
-                                    <td>50</td>
-                                    <td>400</td>
-                                  
-                                   
-                                    </tr>
-                                  
-                                   
-                                    </tbody>
-                                  
-                                    </table>
-                            </div>
-                        </div>
-
-                        <div class="carosel">
-                                <div class="swiper-container swiper-init swipermultiple">
-                               
-                                  
-                                    <table class="blueTable">
-                                        <thead>
-                                        <tr>
-                                        <th>Team Basic Gold Dividends
-
-                                        </th>
-                                        <th>Investment Income Dividends
-
-                                        </th>
-                                       
-                                        </tr>
-                                        </thead>
-                                       
-                                        <tbody>
-                                        <tr>
-                                        <td>200000</td>
-                                        <td>50000</td>
-                                      
-                                       
-                                        </tr>
-                                       
-                                       
-                                        </tbody>
-                                      
-                                        </table>
                                 </div>
-                            </div>
                     </div>
 
                  
-
-                    <h2 class="block-title">Assets</h2>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="#" class="media">
-                                <div class="media-body">
-                                    <h5 class="text-primary">3000 UGX</h5>
-                                    <p>Investment Date: 17, August 2019</p>
-                                    <p>Redeemable By: 25, October 2019</p>
-                                    <h2 class="title-number-carousel color-primary">Income: <span class="text-primary">3000 UGX</span><small></small></h2>
-                                </div>
-                                <div class="w-auto">
-                                    <small class="text-danger effort-time"> 0.2%  <i class="material-icons">arrow_drop_down</i></small>
-                                    <div class="dynamicsparkline"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                                <a href="#" class="media">
-                                    <div class="media-body">
-                                        <h5 class="text-primary">20000 UGX</h5>
-                                        <p>Investment Date: 17, August 2019</p>
-                                        <p>Redeemable By: 25, October 2019</p>
-                                        <h2 class="title-number-carousel color-primary">Income: <span class="text-primary">2000 UGX</span><small></small></h2>
-                                    </div>
-                                    <div class="w-auto">
-                                        <small class="text-success effort-time"> 2.4%  <i class="material-icons">arrow_drop_up</i></small>
-                                        <div class="dynamicsparkline"></div>
-                                    </div>
-                                </a>
-                            </li>
-                    </ul>
 
                     <!-- <h2 class="block-title">Latest Comments</h2>
                     <ul class="list-group">

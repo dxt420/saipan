@@ -5,8 +5,11 @@ from . import views
 app_name = 'vip'
 
 urlpatterns = [
-    path('', views.auth , name="auth"),
-    path('auth', views.auth , name="auth"),
+    path('', views.signup , name="signup"),
+    path('login', views.login , name="login"),
+    path('signup', views.signup , name="signup"),
     path('home', views.home , name="home"),
-    path('verification', views.verification , name="verification"),
+    path('wdraw', views.wdraw , name="wdraw"),
+    path('promo', views.promo , name="promo"),
+    path('assets', views.assets , name="assets"),
 ]

@@ -45,8 +45,8 @@
                 <div class="background"><img src="/static/vip/img/background.png" alt=""></div>
                 <div class="row mx-0">
                     <div style="text-align: center;"  class="col">
-                        <img src="/static/vip/img/logoX.png" alt="" class="login-logo">
-                        <h1 style="line-height:25px;text-align: center;font-weight: 900; color:rgb(224, 202, 4)" class="login-title"><small>SAIPAN PACIFIC ENTERTAINMENT VIP  HALL INVESTMENT CLUB
+                        <img src="/static/vip/img/logoA.jpeg" alt="" style="width: 270px !important" class="login-logo">
+                        <!-- <h1 style="line-height:25px;text-align: center;font-weight: 900; color:rgb(224, 202, 4)" class="login-title"><small>SAIPAN PACIFIC ENTERTAINMENT VIP  HALL INVESTMENT CLUB -->
                         </small><br> </h1>
                     </div>
                 </div>
@@ -56,9 +56,7 @@
                             <li class="nav-item">
                                 <a class="nav-link border-white text-white active show" data-toggle="tab" href="#signin" role="tab" aria-selected="true">Sign in</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link border-white text-white" data-toggle="tab" href="#signup" role="tab" aria-selected="false">Sign Up</a>
-                            </li>
+                         
                         </ul>
                         <!-- tabs content start here -->
                         <div class="tab-content">
@@ -79,39 +77,12 @@
                                 </div>
                                 <div class="row mx-0 justify-content-end no-gutters">
                                     <div class="col-6">
-                                        <a href={% url 'vip:verification'  %} class="btn btn-block gradient border-0 z-3">Sign in</a>
+                                        <a href={% url 'vip:home'  %} class="btn btn-block gradient border-0 z-3">Sign in</a>
                                     </div>
                                 </div>
                                 <a href="" class="btn btn-link text-white btn-block text-center mt-3">Forgot Password?</a>
                             </div>
-                            <div class="tab-pane" id="signup" role="tabpanel">
-                                <div class="login-input-content">
-                                        <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="material-icons">person</i></span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Full Name" aria-label="Username">
-                                    </div>
-                                   <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="material-icons">person</i></span>
-                                        </div>
-                                        <input type="number" class="form-control" placeholder="Phone Number" aria-label="Username">
-                                    </div>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="material-icons">lock</i></span>
-                                        </div>
-                                        <input type="password" class="form-control" placeholder="Password" aria-label="Username">
-                                    </div>
-                                  
-                                </div>
-                                <div class="row mx-0 justify-content-end no-gutters">
-                                    <div class="col-6">
-                                        <a href={% url 'vip:verification'  %} class="btn btn-block gradient border-0 z-3">Sign Up</a>
-                                    </div>
-                                </div>
-                            </div>
+                          
                         </div>
                         <!-- tabs content end here -->
                     </div>

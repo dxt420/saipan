@@ -136,7 +136,7 @@
                         <a href={% url 'vip:assets'  %}> Assets</a>
                     </div>		
                 </div>
-                <div class="mobile-bottom-nav__item">		
+                <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">		
                     <div class="mobile-bottom-nav__item-content">
                         <i class="material-icons">account_balance_wallet</i>
                        
@@ -144,9 +144,9 @@
                         <a href={% url 'vip:wdraw'  %}>  W/draw</a>
                     </div>
                 </div>
-                <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+                <div class="mobile-bottom-nav__item ">
                     <div class="mobile-bottom-nav__item-content">
-                        <i class="material-icons">home</i>
+                            <a href={% url 'vip:home'  %}> <i class="material-icons">home</i></a>
                         
                     </div>		
                 </div>
@@ -220,35 +220,35 @@
                                 </div> -->
                                 <table class="blueTable">
                                     <thead>
-                                    <tr>
-                                    <th>Basic Gold</th>
-                                    <th>Investment </th>
                                    
-                                    </tr>
-                                    </thead>
-                                    <tfoot>
+                       
                                     <tr>
-                                    <td colspan="4">
-                                    <div class="links">  <a href={% url 'vip:assets'  %}>More</a> </div>
-                                    </td>
-                                    </tr>
-                                    </tfoot>
+                                            <td colspan="4">
+                                            <div style="color:white">  List of Basic Gold Available Today</div>
+                                            </td>
+                                            </tr>
+
+                                            <tr>
+                                                    <th>Amount
+                                                        </th>
+                                                    <th>Investment Time </th>
+
+                                                    <th> 🔵</th>
+                                                   
+                                                    </tr>
+                                   
+                        
+                                            
+                                    </thead>
+                                    
                                     <tbody>
                                     <tr>
-                                    <td>8000</td>
-                                    <td>720</td>
+                                    <td>2000</td>
+                                    <td></td>
+                                    <td>🔵</td>
                                    
                                     </tr>
-                                    <tr>
-                                    <td>20000</td>
-                                    <td>6000</td>
-                               
-                                    </tr>
-                                    <tr>
-                                            <td>2000</td>
-                                            <td>600</td>
-                                       
-                                            </tr>
+                                 
                                    
                                     </tbody>
                                     </table>
@@ -259,189 +259,70 @@
                             <div class="swiper-container swiper-init swipermultiple">
                            
                               
-                                <table class="blueTable">
-                                    <thead>
-                                    <tr>
-                                    <th>New Members Today
-                                    </th>
-                                    <th>Total Number of Members
-                                    </th>
-                                   
-                                    </tr>
-                                    </thead>
-                                   
-                                    <tbody>
-                                    <tr>
-                                    <td>50</td>
-                                    <td>400</td>
-                                  
-                                   
-                                    </tr>
-                                  
-                                   
-                                    </tbody>
-                                  
-                                    </table>
+                                    <table class="blueTable">
+                                            <thead>
+                                           
+                               
+                                            <tr>
+                                                    <td colspan="4">
+                                                    <div style="color:white">  Income</div>
+                                                    </td>
+                                                    </tr>
+        
+                                                   
+                                           
+                                
+                                                    
+                                            </thead>
+                                            
+                                            <tbody>
+                                            <tr>
+                                            <td>Personal Investment Income
+                                                </td>
+                                            <td>2000</td>
+                                            <td>🔵</td>
+                                           
+                                            </tr>
+
+                                            <tr>
+                                                    <td>Team Basic Gold Income
+
+                                                        </td>
+                                                    <td>5000</td>
+                                                    <td>🔵</td>
+                                                   
+                                                    </tr>
+
+                                                    <tr>
+                                                            <td>Team Investment Income
+
+                                                                </td>
+                                                            <td>2000</td>
+                                                            <td>🔵</td>
+                                                           
+                                                            </tr>
+                                         
+                                           
+                                            </tbody>
+                                            </table>
                             </div>
                         </div>
 
-                        <div class="carosel">
-                                <div class="swiper-container swiper-init swipermultiple">
-                               
-                                  
-                                    <table class="blueTable">
-                                        <thead>
-                                        <tr>
-                                        <th>Team Basic Gold Dividends
 
-                                        </th>
-                                        <th>Investment Income Dividends
-
-                                        </th>
-                                       
-                                        </tr>
-                                        </thead>
-                                       
-                                        <tbody>
-                                        <tr>
-                                        <td>200000</td>
-                                        <td>50000</td>
-                                      
-                                       
-                                        </tr>
-                                       
-                                       
-                                        </tbody>
-                                      
-                                        </table>
+                        <div class="row mx-0">
+                                <div class="col">
+                                    <button type="button" class="mb-2 btn btn-sm btn-primary">Withdraw Cash</button>
+                             
+                                    <button type="button" class="mb-2 btn btn-sm btn-danger">Invest Again</button>
+                                    
                                 </div>
                             </div>
+                    
                     </div>
 
                  
 
-                    <h2 class="block-title">Assets</h2>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="#" class="media">
-                                <div class="media-body">
-                                    <h5 class="text-primary">3000 UGX</h5>
-                                    <p>Investment Date: 17, August 2019</p>
-                                    <p>Redeemable By: 25, October 2019</p>
-                                    <h2 class="title-number-carousel color-primary">Income: <span class="text-primary">3000 UGX</span><small></small></h2>
-                                </div>
-                                <div class="w-auto">
-                                    <small class="text-danger effort-time"> 0.2%  <i class="material-icons">arrow_drop_down</i></small>
-                                    <div class="dynamicsparkline"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                                <a href="#" class="media">
-                                    <div class="media-body">
-                                        <h5 class="text-primary">20000 UGX</h5>
-                                        <p>Investment Date: 17, August 2019</p>
-                                        <p>Redeemable By: 25, October 2019</p>
-                                        <h2 class="title-number-carousel color-primary">Income: <span class="text-primary">2000 UGX</span><small></small></h2>
-                                    </div>
-                                    <div class="w-auto">
-                                        <small class="text-success effort-time"> 2.4%  <i class="material-icons">arrow_drop_up</i></small>
-                                        <div class="dynamicsparkline"></div>
-                                    </div>
-                                </a>
-                            </li>
-                    </ul>
-
-                    <!-- <h2 class="block-title">Latest Comments</h2>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="#" class="media">
-                                <div class="w-auto h-100">
-                                    <figure class="avatar avatar-40"><img src="/static/vip/img/user1.png" alt=""> </figure>
-                                </div>
-                                <div class="media-body">
-                                    <h5>John Doe <span class="status-online bg-success"></span></h5>
-                                    <p>My view is to create greate things </p>
-                                </div>
-
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#" class="media">
-                                <div class="w-auto h-100">
-                                    <figure class="avatar avatar-40"><img src="/static/vip/img/user2.png" alt=""> </figure>
-                                </div>
-                                <div class="media-body">
-                                    <h5>Angeliina Hardy <span class="status-online bg-warning"></span></h5>
-                                    <p>My view is to create greate things </p>
-                                </div>
-
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#" class="media">
-                                <div class="w-auto h-100">
-                                    <figure class="avatar avatar-40"><img src="/static/vip/img/user3.png" alt=""> </figure>
-                                </div>
-                                <div class="media-body">
-                                    <h5>Arnold Johnsons <span class="status-online bg-danger"></span></h5>
-                                    <p>My view is to create greate things </p>
-                                </div>
-
-                            </a>
-                        </li>
-                    </ul>
-
-                    <h2 class="block-title">Trending Project</h2>
-                    <div class="row mx-0">
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body">
-                                    <a href="#" class="media">
-                                        <div class="media-body">
-                                            <h5>Karla Sports App </h5>
-                                            <p>25 November 2018</p>
-                                        </div>
-                                        <div class="w-auto h-100">
-                                            <span class="text-primary">Completed</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="row">
-                                        <div class="col">
-                                            <i class="material-icons text-warning">star</i>
-                                            <span class="post-seconds">4.9 <span>(254)</span></span>
-                                        </div>
-                                        <div class="col">
-                                            <i class="material-icons text-grey">schedule</i>
-                                            <span class="post-seconds">254 <span>hrs</span></span>
-                                        </div>
-                                        <div class="col">
-                                            <i class="material-icons text-grey">monetization_on</i>
-                                            <span class="post-seconds">4000 <span>$</span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="my-4">
-                    <div class="block-title text-center">About us</div>
-                    <h2 class="text-center mt-0 mb-4">We are MobileUX</h2>
-                    <div class="row mx-0">
-                        <div class="col">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.
-                                <br>
-                                <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                        <div class="col col-sm-2">
-                            <figure class="m-0">
-                                <img src="/static/vip/img/background.png" class="mw-100" alt="">
-                            </figure>
-                        </div>
-                    </div> -->
+                
                     <br>
                 </div>
                 <div class="footer-wrapper">
@@ -450,12 +331,7 @@
                             <div class="col">
                                 
                             </div>
-                            <!-- <div class="col-7 text-right">
-                                <a href="" class="social"><img src="/static/vip/img/facebook.png" alt=""></a>
-                                <a href="" class="social"><img src="/static/vip/img/googleplus.png" alt=""></a>
-                                <a href="" class="social"><img src="/static/vip/img/linkedin.png" alt=""></a>
-                                <a href="" class="social"><img src="/static/vip/img/twitter.png" alt=""></a>
-                            </div> -->
+                          
                         </div>
                     </div>
                     <div class="footer dark">
