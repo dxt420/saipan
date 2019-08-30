@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+    body {
+  height: 100vh;
+  background: #375ffa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Open Sans;
+}
+body.wrong {
+  -webkit-animation: bg-red 1s ease-in;
+          animation: bg-red 1s ease-in;
+}
+body.correct {
+  -webkit-animation: bg-green 1s ease-in;
+          animation: bg-green 1s ease-in;
+}
+
+#inspiration {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+}
+#inspiration a {
+  display: inline-block;
+  float: left;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: all 1s ease;
+}
+#inspiration a:hover {
+  color: #212121;
+}
+#inspiration p {
+  margin: 0;
+  padding-left: .4em;
+  display: inline-block;
+  float: right;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#pin {
+  background: #212121;
+  /* width: 20em; */
+  height:100%;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: .3em;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  margin: auto;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.dots {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  padding-top: 3em;
+}
+
+.dot {
+  position: relative;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.8em;
+  width: 2em;
+  height: 2em;
+  -webkit-transform: scale3d(0.7, 0.7, 0.7);
+          transform: scale3d(0.7, 0.7, 0.7);
+}
+.dot.active {
+  -webkit-animation: growDot .5s ease;
+          animation: growDot .5s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.dot.wrong {
+  -webkit-animation: wrong .9s ease;
+          animation: wrong .9s ease;
+}
+.dot.correct {
+  -webkit-animation: correct .9s ease;
+          animation: correct .9s ease;
+}
+
+#pin p {
+  font-size: 3em;
+}
+
+.numbers {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  align-content: flex-end;
+  margin: 2em 0;
+}
+
+.number {
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0.5em;
+  border-radius: 2.5em;
+  border: 2px solid rgba(255, 255, 255, 0);
+  text-align: center;
+  line-height: 2.5em;
+  font-weight: 400;
+  font-size: 4.8em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transition: all .5s ease;
+}
+.number:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.number:hover:before {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.number:before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  width: 2.5em;
+  height: 2.5em;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2.5em;
+  transition: all .5s ease;
+}
+.number.grow:before {
+  -webkit-animation: grow .6s ease;
+          animation: grow .6s ease;
+}
+
+@-webkit-keyframes growDot {
+  100% {
+    background: white;
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+            transform: scale3d(0.9, 0.9, 0.9);
+  }
+}
+
+@keyframes growDot {
+  100% {
+    background: white;
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+            transform: scale3d(0.9, 0.9, 0.9);
+  }
+}
+@-webkit-keyframes grow {
+  50% {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+            transform: scale3d(1.5, 1.5, 1.5);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes grow {
+  50% {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5);
+            transform: scale3d(1.5, 1.5, 1.5);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes wrong {
+  20% {
+    background: crimson;
+  }
+  40% {
+    -webkit-transform: translate(-15px, 0);
+            transform: translate(-15px, 0);
+  }
+  60% {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+  80% {
+    -webkit-transform: translate(-5px, 0);
+            transform: translate(-5px, 0);
+  }
+}
+@keyframes wrong {
+  20% {
+    background: crimson;
+  }
+  40% {
+    -webkit-transform: translate(-15px, 0);
+            transform: translate(-15px, 0);
+  }
+  60% {
+    -webkit-transform: translate(10px, 0);
+            transform: translate(10px, 0);
+  }
+  80% {
+    -webkit-transform: translate(-5px, 0);
+            transform: translate(-5px, 0);
+  }
+}
+@-webkit-keyframes correct {
+  20% {
+    background: limegreen;
+  }
+  40% {
+    -webkit-transform: translate(0, -15px);
+            transform: translate(0, -15px);
+  }
+  60% {
+    -webkit-transform: translate(0, 10px);
+            transform: translate(0, 10px);
+  }
+  80% {
+    -webkit-transform: translate(0, -5px);
+            transform: translate(0, -5px);
+  }
+}
+@keyframes correct {
+  20% {
+    background: limegreen;
+  }
+  40% {
+    -webkit-transform: translate(0, -15px);
+            transform: translate(0, -15px);
+  }
+  60% {
+    -webkit-transform: translate(0, 10px);
+            transform: translate(0, 10px);
+  }
+  80% {
+    -webkit-transform: translate(0, -5px);
+            transform: translate(0, -5px);
+  }
+}
+@-webkit-keyframes bg-red {
+  50% {
+    background: crimson;
+  }
+}
+@keyframes bg-red {
+  50% {
+    background: crimson;
+  }
+}
+@-webkit-keyframes bg-green {
+  50% {
+    background: limegreen;
+  }
+}
+@keyframes bg-green {
+  50% {
+    background: limegreen;
+  }
+}
+
+  </style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+</div>
+<div id="pin">
+<div class="dots">
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+</div>
+<p>Enter your 6-digit PIN code</p>
+<div class="numbers">
+<div class="number">1</div>
+<div class="number">2</div>
+<div class="number">3</div>
+<div class="number">4</div>
+<div class="number">5</div>
+<div class="number">6</div>
+<div class="number">7</div>
+<div class="number">8</div>
+<div class="number">9</div>
+
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script id="rendered-js">
+      (function () {
+  var input = '',
+  correct = '543453';
+
+  var dots = document.getElementsByClassName('dot'),
+  numbers = document.getElementsByClassName('number');
+  dots = Array.from(dots);
+  numbers = Array.from(numbers);
+
+  var numbersBox = document.getElementsByClassName('numbers')[0];
+  $(numbersBox).on('click', '.number', function (evt) {
+    var number = $(this);
+
+    number.addClass('grow');
+    input += number.index() + 1;
+    $(dots[input.length - 1]).addClass('active');
+
+    if (input.length >= 6) {
+      if (input !== correct) {
+        dots.forEach(dot => $(dot).addClass('wrong'));
+        $(document.body).addClass('wrong');
+      } else
+      {
+        dots.forEach(dot => $(dot).addClass('correct'));
+        $(document.body).addClass('correct');
+      }
+      setTimeout(function () {
+        dots.forEach(dot => dot.className = 'dot');
+        input = '';
+      }, 900);
+      setTimeout(function () {
+        document.body.className = '';
+      }, 1000);
+    }
+    setTimeout(function () {
+      number.className = 'number';
+    }, 1000);
+  });
+})();
+      //# sourceURL=pen.js
+    </script>
+</body>
+</html>

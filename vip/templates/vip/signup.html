@@ -22,6 +22,8 @@
     <link id="theme" rel="stylesheet" href="/static/vip/css/style.css" type="text/css">
     <link rel="stylesheet/scss" type="text/css" href="/static/vip/css/style.scss">
 
+  
+
 
     <title>SPE VIP</title>
 
@@ -32,7 +34,7 @@
        
 
 
-
+      
 
 
     <div class="loader justify-content-center ">
@@ -43,66 +45,192 @@
         <div class="page">
             <div class="page-content h-100">
                 <div class="background"><img src="/static/vip/img/background.png" alt=""></div>
-                <div class="row mx-0">
-                    <div style="text-align: center;"  class="col">
-                        <img src="/static/vip/img/logoA.jpeg" alt="" style="width: 270px !important" class="login-logo">
-                        <!-- <h1 style="line-height:25px;text-align: center;font-weight: 900; color:rgb(224, 202, 4)" class="login-title"><small>SAIPAN PACIFIC ENTERTAINMENT VIP  HALL INVESTMENT CLUB -->
-                        </small><br> </h1>
-                    </div>
-                </div>
+               
                 <div class="row mx-0">
                     <div class="col">
                         <ul class="nav nav-tabs login-tabs mt-3" role="tablist">
                           
                             <li class="nav-item">
-                                <a class="nav-link border-white text-white" data-toggle="tab" href="#signup" role="tab" aria-selected="false">Sign Up</a>
+                                <a class="nav-link border-white text-white" data-toggle="tab" href="#signup" role="tab" aria-selected="false">Create New Account</a>
                             </li>
                         </ul>
                         <!-- tabs content start here -->
                         <div class="tab-content">
+                            
                           
+                            <form role="form" class="form-horizontal form-groups validate" action={% url 'vip:register' %} method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
                             <div class="tab-pane active" id="signup" role="tabpanel">
+                            
+
+                                    {% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
                                 <div class="login-input-content">
                                         <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="material-icons">person</i></span>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="First Name" aria-label="Username">
+                                        
+                                        <input type="text" class="form-control" name="first_name" placeholder="First Name" >
+                                      
                                     </div>
+                                  
+
+
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="material-icons">person</i></span>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="Last Name" >
+                                       
+                                        <input type="text" class="form-control" name="last_name" placeholder="Last Name" >
                                     </div>
+
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="material-icons">person</i></span>
+                                        </div>
+                                       
+                                        <input type="text" class="form-control" name="username" placeholder="Username" >
+                                    </div>
+                                    <div class="input-group">
+                                            <div class="input-group-prepend">
+                                               
+                                            </div>
+                                            
+                                            <!-- <span style="color: #cc2424">{{ form.last_name.errors.as_text }}</span> -->
+                                        </div>
+
+
+
                                    <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="material-icons">person</i></span>
                                         </div>
-                                        <input type="number" class="form-control" placeholder="Phone Number" aria-label="Username">
+                                        
+                                        <input type="number" class="form-control" placeholder="Phone Number" onkeypress="return event.charCode >= 48 && event.charCode <= 57" name="phone" aria-label="Username">
                                     </div>
+                                    <div class="input-group">
+                                            <div class="input-group-prepend">
+                                               
+                                            </div>
+                                            
+                                            <!-- <span style="color: #cc2424">{{ form.phone.errors.as_text }}</span> -->
+                                        </div>
+
+
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="material-icons">person</i></span>
+                                        </div>
+                                        
+                                        <input type="email" class="form-control" placeholder="Email" name="email" >
+                                    </div>
+                                     <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                       
+                                                    </div>
+                                                    
+                                                    <!-- <span style="color: #cc2424">{{ form.email.errors.as_text }}</span> -->
+                                                </div>
+
+
+
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="material-icons">lock</i></span>
                                         </div>
-                                        <input type="password" class="form-control" placeholder="Password" aria-label="Username">
+                                      
+                                        <input type="password" class="form-control" placeholder="Password" name="password1" >
                                     </div>
+                                     <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                       
+                                                    </div>
+                                                    
+                                                    <!-- <span style="color: #cc2424">{{ form.password1.errors.as_text }}</span> -->
+                                                </div>
+
+
+
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="material-icons">lock</i></span>
                                         </div>
-                                        <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Username">
+      
+                                        <input type="password" class="form-control" placeholder="Confirm Password" name="password2" >
                                     </div>
+                                    <div class="input-group">
+                                            <div class="input-group-prepend">
+                                               
+                                            </div>
+                                            
+                                            <!-- <span style="color: #cc2424">{{ form.password2.errors.as_text }}</span> -->
+                                        </div>
+
+
+
+
+                                    <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="material-icons">lock</i></span>
+                                            </div>
+                                            
+                                            <!-- <input type="text" min="6" max="6" lass="form-control" placeholder="Create a Pin" name="pin1" > -->
+                                            <input  required onkeypress="return event.charCode >= 49 && event.charCode <= 57" minlength="6" maxlength="6"  class="form-control" placeholder="Create a 6-digit Pin" name="pin1" >
+                                        </div>
+                                        <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                   
+                                                </div>
+                                                
+                                                <!-- <span style="color: #cc2424">{{ form.pin1.errors.as_text }}</span> -->
+                                            </div>
+
+
+
+
+
+                                        <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="material-icons">lock</i></span>
+                                                </div>
+                                                
+                                                <input required onkeypress="return event.charCode >= 49 && event.charCode <= 57" minlength="6" maxlength="6" class="form-control" placeholder="Confirm your Pin" name="pin2" >
+                                            </div>
+                                            <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                       
+                                                    </div>
+                                                    
+                                                    <!-- <span style="color: #cc2424">{{ form.pin2.errors.as_text }}</span> -->
+                                                </div>
+                                           
                                   
                                 </div>
                                 <div class="row mx-0 justify-content-end no-gutters">
                                     <div class="col-6">
-                                        <a href={% url 'vip:home'  %} class="btn btn-block gradient border-0 z-3">Sign Up</a>
+                                        <button type="submit" class="btn btn-block gradient border-0 z-3">Sign Up</button>
                                     </div>
                                 </div>
-                                <a href={% url 'vip:login'  %} class="btn btn-link text-white btn-block text-center mt-3">Already a member? Sign In</a>
+                                <a href={% url 'vip:signin'  %} class="btn btn-link text-white btn-block text-center mt-3">Already a member? Sign In</a>
 
                             </div>
+
+                            </form>
                         </div>
                         <!-- tabs content end here -->
                     </div>
@@ -184,6 +312,10 @@
         });
 
     </script>
+
+
+
+
 
     
 </body>
